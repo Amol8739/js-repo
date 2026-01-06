@@ -48,23 +48,55 @@ how to access it.
 */
 //Array Example :
 
-let heros = ["Superman", "Batman", "Ironman"]
+// let heros = ["Superman", "Batman", "Ironman"]
 
 //Object Example :
 
-let obj = {
-    name : "Amol",
-    age : 55,
-    class : "BE"
-}
+// let obj = {
+//     name : "Amol",
+//     age : 55,
+//     class : "BE"
+// }
 
 //Function Example :
 
-const myFirstFunc = function () {
-  console.log("Hello World");
+// const myFirstFunc = function () {
+//   console.log("Hello World");
+// }
+
+// console.log(typeof heros); // Output is Object
+// console.log(typeof obj);  // Output is Object
+// console.log(typeof myFirstFunc); // Output is Function but actually it is ObjectFunction.
+
+// --------------------x--------------------x--------------------x--------------------x--------------------x--------------------x--------------------x--------------------x
+
+/* Stack Memory (Stores Primitive Datatype)
+
+- If you make changes in values it will not change the original values.
+*/
+
+let name1 = "Amol"
+let name2 = name1
+name2 = "Nikhil"
+
+console.log("name 1 is : ", name1);
+console.log("name 2 is : ", name2);
+
+
+
+/* Heap Memory (Stores Non-Primitive Datatype)
+
+ - If you make changes in values it will change the original values.
+*/
+
+let user1 = {
+  id : "12345",
+  email : "user1@gmail.com"
 }
 
-console.log(typeof heros); // Output is Object
-console.log(typeof obj);  // Output is Object
-console.log(typeof myFirstFunc); // Output is Function but actually it is ObjectFunction.
+let user2 = user1
+user2.email = "user2@gmail.com"
 
+console.log(user1.email);
+console.log(user2.email);
+console.log(user2.id);
